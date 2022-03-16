@@ -1,20 +1,18 @@
-class CSVFile:
+class CSVFile():
 
-    def __init__(self, file_name):
-        self.name = file_name
+    def __init__(self, name):
+        self.name = name
 
     def get_data(self):
-        lista = list()
+        lista = []
         file = open(self.name, 'r')
         for line in file:
-            if line.startswith('Date'):
-                pass
-            else:
-                elements = line.split(',')
-                elements[1] = str(float(elements[1]))
+            elements = line.split(',')
+            if elements[0] != 'Date':
+                elements[1] = elements[1][0:-1]
                 lista.append(elements)
         return lista
 
-File = CSVFile('shampoo_sales.csv')
-print(File.get_data())
+# File = CSVFile('shampoo_sales.csv')
+# print(File.get_data())
             

@@ -13,5 +13,5 @@ def sum_csv(file_name):
         print("Il file è vuoto")
     file.close()
     return sum_value
-print(sum_csv('shampoo_sales.csv'))
+#print(sum_csv('shampoo_sales.csv'))
 # print("The sum of shampoo sales over yers is: {}".format(sum_csv('shampoo_sales.csv')))
